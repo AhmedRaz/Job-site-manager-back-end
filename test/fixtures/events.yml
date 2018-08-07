@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_name: MyString
+  job_id: 1
+  resolved: false
+  event_details: MyText
+  event_type: MyString
+  event_struct: MyString
+
+two:
+  event_name: MyString
+  job_id: 1
+  resolved: false
+  event_details: MyText
+  event_type: MyString
+  event_struct: MyString
