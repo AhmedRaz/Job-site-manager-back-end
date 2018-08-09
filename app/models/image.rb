@@ -1,3 +1,6 @@
 class Image < ApplicationRecord
-  belongs_to :job 
+  include Filterable
+  belongs_to :job
+
+  scope :job, -> (job_id) { where(job_id: job_id) }
 end

@@ -4,8 +4,6 @@ class Api::V1::JobsController < ApplicationController
   # GET /jobs
 
   def index
-    # @jobs = Job.where(nil)
-    # @jobs = @jobs.company(params[:company]) if params[:company].present?
      @jobs = Job.filter(params.slice(:company, :location, :starts_with))
     render json: @jobs
   end
@@ -41,12 +39,10 @@ class Api::V1::JobsController < ApplicationController
   # end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_job
       @job = Job.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
     def job_params
       params.require(:job).permit(:name, :location_id, :company_id)
     end
