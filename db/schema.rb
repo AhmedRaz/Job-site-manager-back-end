@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_07_211525) do
+ActiveRecord::Schema.define(version: 2018_08_08_125634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 2018_08_07_211525) do
     t.string "event_struct"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.string "image_source", default: [], array: true
   end
 
   create_table "images", force: :cascade do |t|
