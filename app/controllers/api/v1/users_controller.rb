@@ -3,6 +3,11 @@ class Api::V1::UsersController < ApplicationController
   # has_scope :company, only: :index
   # GET /users
   # /api/v1/users?company=n , where n = company_id
+  def login
+
+  end
+
+
   def index
     # @users = User.where(nil)
     # @users = @users.company(params[:company]) if params[:company].present?
@@ -17,7 +22,7 @@ class Api::V1::UsersController < ApplicationController
 
   # POST /users
   def create
-
+    
     @user = User.new(user_params)
 
     if @user.save

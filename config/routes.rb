@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resources :jobs, only: [:index, :create, :show, :update]
       resources :locations
       resources :users
+      post 'users/login'=> 'users#login'
     end
   end
 end
