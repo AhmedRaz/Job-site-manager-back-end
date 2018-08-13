@@ -10,6 +10,8 @@ Rails.application.routes.draw do
       resources :locations
       resources :users
       post 'users/login'=> 'users#login'
+      post "/auth", to: 'auth#login'
+      get "/current_user", to: 'auth#get_current_user'
     end
   end
 end
