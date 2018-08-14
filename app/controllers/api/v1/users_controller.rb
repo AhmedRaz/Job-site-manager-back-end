@@ -3,10 +3,6 @@ class Api::V1::UsersController < ApplicationController
   # has_scope :company, only: :index
   # GET /users
   # /api/v1/users?company=n , where n = company_id
-  def login
-
-  end
-
 
   def index
     # @users = User.where(nil)

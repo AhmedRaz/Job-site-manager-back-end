@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::API
 
   def issue_token(payload)
+    
    JWT.encode(payload, secret)
  end
 
@@ -15,6 +16,7 @@ class ApplicationController < ActionController::API
  def decoded_token
    if token
      # lets decode
+
      begin
        decoded = JWT.decode(token, secret)
        decoded[0]["id"]
