@@ -4,6 +4,7 @@ class Api::V1::JobsController < ApplicationController
   # GET /jobs
 
   def index
+    
      @jobs = Job.filter(params.slice(:company, :location, :starts_with))
     render json: @jobs
   end
