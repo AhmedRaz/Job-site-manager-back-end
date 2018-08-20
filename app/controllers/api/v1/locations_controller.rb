@@ -4,7 +4,7 @@ class Api::V1::LocationsController < ApplicationController
   # GET /locations
 
   def index
-     @locations = Location.filter(params.slice(:city))
+     @locations = Location.filter(params.slice(:city, :company))
     render json: @locations
   end
 
