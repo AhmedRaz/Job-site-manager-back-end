@@ -44,6 +44,6 @@ class Api::V1::LocationsController < ApplicationController
     end
 
     def location_params
-      params.require(:location).permit(:latitude, :longitude, :address, :city, :state)
+      params.require(:location).permit(:latitude, :longitude, :address, :city, :state, :company_id)
     end
 end
